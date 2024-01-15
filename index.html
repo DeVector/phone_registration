@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./src/formulario-de-registro.png" alt="Imagem para de um formulario online">
+            <h1>Cadastro de Clientes</h1>
+        </header>
+    
+        <form id="form-clients">
+            <input placeholder="Seu Nome" type="text" name="full-name" id="full-name" required>
+            <input placeholder="Seu Número" type="text" name="phone-number" id="phone-number" required>
+            <select name="country" id="country" required>
+                <option value="">País</option>
+                <option value="brazil">Brasil</option>
+                <option value="usa">EUA</option>
+            </select>
+            <button type="submit">Cadastrar +</button>
+        </form>
+    
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>
+                        Nome Completo
+                    </th>
+                    <th>
+                        Número de Telefone
+                    </th>
+                    <th>
+                        País
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Número de Contatos</td>
+                    <td id="count-contacts"></td>
+                    <td>---</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
