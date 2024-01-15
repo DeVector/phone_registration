@@ -12,6 +12,8 @@ const phoneNumbers = [];
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    console.log(phoneNumbers)
+
     addLinha();
     atualizarTabela();
     atualizarQuantidade();
@@ -24,11 +26,14 @@ function addLinha() {
     const fullName = document.getElementById('full-name');
     const fullPhone = document.getElementById('phone-number');
 
-    if (phoneNumbers.includes(fullPhone)) {
-        alert('Este númera já está cadastrado!!!!!')
+    if (phoneNumbers.includes(fullPhone.value)) {
+
+        alert(`O número ${fullPhone.value} já está cadastrado`)
+
     } else {
-        fullNames.push(fullName);
-        phoneNumbers.push(fullPhone);
+
+        fullNames.push(fullName.value);
+        phoneNumbers.push(fullPhone.value);
 
         let linha = `<tr>`;
         linha += `<td>${fullName.value}</td>`;
